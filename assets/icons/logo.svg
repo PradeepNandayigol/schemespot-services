@@ -1,0 +1,15 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E68A2E"/>
+      <stop offset="50%" stop-color="#F2A84E"/>
+      <stop offset="100%" stop-color="#1F6F4A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="90" cy="90" r="86" fill="#142B4F"/>
+  <circle cx="90" cy="90" r="86" fill="none" stroke="url(#ring)" stroke-width="5"/>
+  <circle cx="90" cy="90" r="74" fill="none" stroke="#F7F4EC" stroke-width="1.5" stroke-dasharray="2 6"/>
+  <text x="90" y="105" font-family="Baloo 2, Poppins, sans-serif" font-size="58" font-weight="700" fill="#F7F4EC" text-anchor="middle">SS</text>
+  <path d="M40 132 Q90 152 140 132" stroke="#E68A2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="90" cy="38" r="4" fill="#E68A2E"/>
+</svg>
