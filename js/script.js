@@ -5,13 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
+    toggle.setAttribute("aria-expanded", "false");
+
+    const closeNav = () => {
+      links.classList.remove("open");
+      toggle.classList.remove("active");
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+
     toggle.addEventListener("click", () => {
-      links.classList.toggle("open");
-      toggle.classList.toggle("active");
+      const isOpen = links.classList.toggle("open");
+      toggle.classList.toggle("active", isOpen);
+      document.body.classList.toggle("nav-open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
     links.querySelectorAll("a").forEach(a =>
-      a.addEventListener("click", () => links.classList.remove("open"))
+      a.addEventListener("click", closeNav)
     );
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeNav(); });
   }
 
   /* Highlight active nav link */
