@@ -272,6 +272,7 @@ section {
   align-items: center;
   gap: 10px;
   min-width: 0;
+  flex: 0 1 auto;
 }
 
 /* .brand img{ width:44px; height:44px; flex:0 0 auto; } */
@@ -290,6 +291,7 @@ section {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  min-width: 0;
 }
 
 .brand-text strong {
@@ -316,6 +318,7 @@ section {
   display: flex;
   align-items: center;
   gap: 4px;
+  flex: 0 0 auto;
 }
 
 .nav-links a {
@@ -326,6 +329,10 @@ section {
   color: var(--ink-2);
   transition: background .2s ease, color .2s ease;
   position: relative;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  flex: 0 0 auto;
 }
 
 .nav-links a:hover {
@@ -380,9 +387,13 @@ section {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width:1120px) {
+@media (max-width:1280px) {
   .nav {
     gap: 12px;
+  }
+
+  .brand {
+    max-width: 220px;
   }
 
   .brand img {
@@ -393,10 +404,12 @@ section {
 
   .brand-text strong {
     font-size: 1rem;
+    max-width: 150px;
   }
 
   .brand-text span {
     font-size: .58rem;
+    max-width: 150px;
   }
 
   .nav-links a {
@@ -413,7 +426,7 @@ section {
   }
 }
 
-@media (max-width:980px) {
+@media (max-width:1120px) {
   .nav-links {
     position: fixed;
     top: 78px;
@@ -783,7 +796,7 @@ section {
   .hero-inner {
     gap: 34px;
     padding-top: 42px;
-    padding-bottom: 52px;
+    padding-bottom: 76px;
   }
 
   .hero h1 {
@@ -1681,9 +1694,42 @@ section {
 }
 
 @media (max-width:560px) {
+  .site-footer {
+    padding-top: 42px;
+    padding-bottom: 104px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 34px;
+    padding-bottom: 28px;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
+  }
+
+  .footer-brand img {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+
+  .footer-brand strong {
+    font-size: 1rem;
+  }
+
+  .site-footer h5 {
+    margin-bottom: 12px;
+  }
+
+  .site-footer ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
@@ -1835,19 +1881,19 @@ section {
 
 @media (max-width:600px) {
   .floating-buttons {
-    right: 14px;
-    bottom: 14px;
-    gap: 10px;
+    right: 12px;
+    bottom: 18px;
+    gap: 9px;
   }
 
   .fab {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
 
   .fab svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 }
 
